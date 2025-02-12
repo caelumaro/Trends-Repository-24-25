@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlo Panambo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            display: grid;
+            grid-template-columns: 1fr minmax(auto, 900px) 1fr;
+            grid-template-areas:
+                ". header ."
+                ". main ."
+                ". footer .";
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        section {
+            display: contents;
+        }
+
+        .column {
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.237);
+        }
+
+        .column.regular {
+            grid-column: span 4;
+            grid-row: span 4;
+        }
+
+        .column.small {
+            grid-column: span 3;
+            grid-row: span 4;
+        }
+
+        .column.wide {
+            grid-column: span 5;
+            grid-row: span 4;
+        }
+
+        .column.long {
+            grid-column: span 4;
+            grid-row: span 8;
+        }
+
+        .column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            font-size: 1.25em;
+            font-style: normal;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        /* Header Styles */
+        header {
+            grid-area: header;
+            padding: 1rem;
+            text-align: left;
+            justify-content: flex-start;
+        }
+
+        .personal-details {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .personal-details p {
+            margin: 0;
+        }
+
+        .personal-details h1 {
+            font-size: 2em;
+            margin-bottom: 4px;
+            margin-top: 0;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+
+        /* Education & Affiliations Styles */
+        .outer {
+            border-left: 2px solid rgb(169, 167, 167);
+        }
+
+        .card {
+            position: relative;
+            margin: 0 0 20px 10px;
+            padding: 10px;
+            color: gray;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            max-width: 400px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2px;
+        }
+
+        .info p {
+            font-size: 0.875em;
+            margin-top: 0;
+        }
+
+        .title {
+            position: relative;
+            font-size: 1em;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding-bottom: 4px;
+        }
+
+        .title::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgb(105, 104, 104);
+            border-radius: 999px;
+            left: -26.8px;
+        }
+
+        /* Skills Styles */
+        .skill-section {
+            margin-bottom: 1rem;
+        }
+
+        .skill-section h3 {
+            font-size: 1em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tags span {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875em;
+        }
+
+        /* Projects Styles */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 16px;
+        }
+
+        .project-card {
+            display: block;
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .project-card p {
+            font-size: 0.875em;
+            color: #555;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 6px;
+            color: #333;
+        }
+
+        /* Certificates & References Styles */
+        .list {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding-bottom: 12px;
+            padding-top: 10px;
+        }
+
+        .list h3 {
+            font-size: 1em;
+            margin: 0;
+            padding-top: 2px;
+        }
+
+        .list p {
+            font-size: 0.875em;
+            margin: 0;
+            padding-bottom: 12px;
+        }
+
+        /* Footer Styles */
+        footer {
+            position: relative;
+            grid-area: footer;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .column.wide,
+            .column.small,
+            .column.wide {
+                grid-column: span 4;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="column">
+            <div class="personal-details">
+                <img src="id.jpg" alt="Profile Picture" class="profile-picture">
+                <article>
+                    <h1>Carlo Mario C. Panambo</h1>
+                    <p>📍 Naga City, Philippines</p>
+                    <p>📞 09273326394</p>
+                    <p>📧 panambocarlomario@gmail.com</p>
+                </article>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="column regular">
+                <h2>📌 About</h2>
+                <p>I am a Computer Science student with a passion for <b>data science, software engineering, and web
+                        development.</b> I love solving problems through code and creating innovative solutions that
+                    enhance
+                    user experiences. </p>
+                <p>
+                    Currently studying at Ateneo de Naga University, I have experience in frontend and backend
+                    development.
+                </p>
+                <p>
+                    Beyond coding, I’m an active member of <b>DOST BICOL SINGCO and ThePILLARS Publication,</b> where I
+                    contribute to research and technology initiatives. Always eager to learn, build, and collaborate, I
+                    thrive in challenges that push my technical and creative skills.
+                </p>
+                <hr>
+                <p><i>Let’s connect and build something amazing! 🚀</i></p>
+            </div>
+        </section>
+
+        <section id="background">
+            <div class="column long">
+                <h2>🎓 Education</h2>
+                <div class="outer">
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">BS Computer Science</h3>
+                            <p>Current - Ateneo de Naga University
+                                <br>2nd year standing
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">Jose Panganiban National High School</h3>
+                            <p>Batch 2023
+                                <br>With Highest Honors
+                                <br>Leadership Awardee
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h2>🌐 Affiliations</h2>
+                <div class="outer">
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">DOST BICOL Scholars' INtegrated Governing Council of Organizations (SINGCO)</h3>
+                            <p>Senior Councilor for ICT Committee
+                                <br>Current
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">ThePILLARS Publication</h3>
+                            <p>Writer, Research Department
+                                <br>Current
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">GABAY: AdNU Association of DOST Scholars</h3>
+                            <p>Director, Audit Committee
+                                <br>Current
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <h3 class="title">The Waves JPNHS</h3>
+                            <p>Associate Editor
+                                <br>2022-2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech-stack">
+            <div class="column regular">
+                <h2>💻 Skills</h2>
+                <div class="skill-section">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-section">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span>Node.js</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-section">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>C++</span>
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>Tagalog :D</span>
+                    </div>
+                </div>
+                <div class="skill-section">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span>Detail-oriented</span>
+                        <span>Strong leadership</span>
+                        <span>Analytical thinker</span>
+                        <span>Flexible</span>
+                        <span>Excellent organization and project management</span>
+                    </div>
+                </div>
+        </section>
+
+        <section id="projects">
+            <div class="column wide">
+                <h2>📂 Projects</h2>
+                <div class="project-grid">
+                    <a href="https://scratch.mit.edu/projects/941094935" class="project-card">
+                        <h3>Eldyria</h3>
+                        <p>RPG game made with Scratch</p>
+                        <span class="badge">
+                            scratch.com
+                        </span>
+                    </a>
+                    <a class="project-card">
+                        <h3>Coming soon!</h3>
+                        <p>Work in progress...</p>
+                        <span class="badge">
+                            stay curious!
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="hobbies">
+            <div class="column small">
+                <h2>✒️ Beyond coding</h2>
+                <p>I enjoy watching movies and series and playing Genshin Impact. Whether it’s a great film or an
+                    open-world adventure, I love immersing myself in new stories and experiences.🎬🎮 </p>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <div class="column regular">
+                <h2>📃 Certificates</h2>
+                <ol class="list">
+                    <li>
+                        <h3>DOST-SEI Scholars Leadership Camp</h3>
+                        <p>Participant</p>
+                    </li>
+                    <li>
+                        <h3>DOST 6th imake.wemake: create.innovate.collaborate</h3>
+                        <p>Top 20 finalist</p>
+                    </li>
+                    <li>
+                        <h3>DOST 6th imake.wemake: create.innovate.collaborate Arduino Bootcamp</h3>
+                        <p>Participant</p>
+                    </li>
+                    <li>
+                        <h3>2023 Division STEMazing</h3>
+                        <p>2nd Runner Up</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <div class="column regular">
+                <h2>🤝 Character References</h2>
+                <ul class="list">
+                    <li>
+                        <h3>Marianne M. Pontanilla</h3>
+                        <p>Head, DOST Bicol SINGCO ICT Committee
+                            <br>marianne07pontanilla@gmail.com
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Rama Lormella S. Albano</h3>
+                        <p>Adviser, The Waves
+                            <br>rama.albano316@gmail.com
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Joy S. Dasco</h3>
+                        <p>SHS Adviser
+                            <br>Coach, 6th DOST imake.wemake
+                            <br>joy.sendon@deped.gov.ph
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Carlo Panambo | N1Am</p>
+    </footer>
+</body>
+
+</html>
