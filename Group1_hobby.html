@@ -12,8 +12,6 @@
         *{
             margin: 0;
             font-family: "Inter";
-            background-color: black;
-            color: white;
         }
         body {
             text-align: center;
@@ -25,43 +23,77 @@
             padding: 30vh;
             font-size: 5rem;
             letter-spacing: -3px;
+            line-height: 0.93;
+        }
+        .intro p {
+            padding-top: 3vh;
+            font-size: 3rem;
         }
         table {
             width: 100%;
-            padding: 10vh 5vh 0 5vh;
+            padding: 5vh 5vh 0 5vh;
         }
-        li {
-            text-align: left;
+        .group h1 {
+            font-size: 3rem;
         }
-        .personal{
-
+        .group td {
+            padding: 0vh 10vh 0 10vh;
         }
-        .personal td {
-            width: 33%;
+        .groupimg img {
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 100%;
         }
-        .personal th {
+        .group a img{
+            width: 15%;
+            padding: 2vh;
+        }
+        .personal {
             font-size: 2rem;
         }
-        .personal td img {
-            width: 100%;
-            height: 50vh;
+        .personal h1 {
+            padding-top: 25vh;
+        }
+        .personal img {
+            filter: brightness(75%) grayscale(1);
+            width: 20%;
+            height: 100vh;
             object-fit: cover;
+            transition: 0.2s;
+        }
+        .personal img:hover{
+            filter: brightness(100%);
+        }
+        .adrian, .carlo {
+            text-align: left;
+            margin-left: 10vh;
+        }
+        .lester, .badz {
+            margin-right: 10vh;
+            text-align: right;
+            direction: rtl;
+        }
+        .adrian img, .carlo img {
+            float: right;
+        }
+        .lester img, .badz img {
+            float: left;
         }
     </style>
 </head>
 <body>
     <div class="intro">
         <h1>Group 1's Hobbies</h1>
-        <p>meow meow meow meow</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum elit eu elit ornare feugiat sit amet eu mi. Phasellus lacinia est a ligula gravida, at feugiat mi elementum. Morbi.</p>
     </div>
     <div class="group">
         <h1>The Researchers</h1>
         <table>
-            <tr>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
+            <tr class="groupimg">
+                <td><img src="https://lh3.googleusercontent.com/d/19e9CxypbuOuaONcRyo3bPjPUuD-vTqls=w1000?authuser=0" alt=""></td>
+                <td><img src="https://lh3.googleusercontent.com/d/19e9CxypbuOuaONcRyo3bPjPUuD-vTqls=w1000?authuser=0" alt=""></td>
+                <td><img src="https://lh3.googleusercontent.com/d/19e9CxypbuOuaONcRyo3bPjPUuD-vTqls=w1000?authuser=0" alt=""></td>
+                <td><img src="https://lh3.googleusercontent.com/d/19e9CxypbuOuaONcRyo3bPjPUuD-vTqls=w1000?authuser=0" alt=""></td>
             </tr>
             <tr>
                 <th>Adrian L. Reforsado</th>
@@ -70,84 +102,74 @@
                 <th>Ophelia Bianca R. Prilles</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum elit eu elit ornare feugiat sit amet eu mi. Phasellus lacinia est a ligula gravida, at feugiat mi elementum. Morbi.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum elit eu elit ornare feugiat sit amet eu mi. Phasellus lacinia est a ligula gravida, at feugiat mi elementum. Morbi.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum elit eu elit ornare feugiat sit amet eu mi. Phasellus lacinia est a ligula gravida, at feugiat mi elementum. Morbi.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum elit eu elit ornare feugiat sit amet eu mi. Phasellus lacinia est a ligula gravida, at feugiat mi elementum. Morbi.</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.facebook.com/adrian.reforsado.12/" target="_blank"><img src="https://lh3.googleusercontent.com/d/1jYryQF685gdBPG24GG11tedmaGoyUNe0=w1000?authuser=0" alt=""></a>
+                    <a href="https://www.instagram.com/rjaks01" target="_blank"><img src="https://lh3.googleusercontent.com/d/1aUQlmt-TwHeK0MdxD7wrXWTPE2u6Sx4m=w1000?authuser=0" alt=""></a>
+                    <a href="https://github.com/rjaks" target="_blank"><img src="https://lh3.googleusercontent.com/d/1kGACqhS0YUYhOumisfKx2zVS8kNdMEtD=w1000?authuser=0" alt=""></a>
+                </td>
+                <td><a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1jYryQF685gdBPG24GG11tedmaGoyUNe0=w1000?authuser=0" alt=""></a>
+                    <a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1aUQlmt-TwHeK0MdxD7wrXWTPE2u6Sx4m=w1000?authuser=0" alt=""></a>
+                    <a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1kGACqhS0YUYhOumisfKx2zVS8kNdMEtD=w1000?authuser=0" alt=""></a>
+                </td>
+                <td><a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1jYryQF685gdBPG24GG11tedmaGoyUNe0=w1000?authuser=0" alt=""></a>
+                    <a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1aUQlmt-TwHeK0MdxD7wrXWTPE2u6Sx4m=w1000?authuser=0" alt=""></a>
+                    <a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1kGACqhS0YUYhOumisfKx2zVS8kNdMEtD=w1000?authuser=0" alt=""></a>
+                </td>
+                <td><a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1jYryQF685gdBPG24GG11tedmaGoyUNe0=w1000?authuser=0" alt=""></a>
+                    <a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1aUQlmt-TwHeK0MdxD7wrXWTPE2u6Sx4m=w1000?authuser=0" alt=""></a>
+                    <a href="" target="_blank"><img src="https://lh3.googleusercontent.com/d/1kGACqhS0YUYhOumisfKx2zVS8kNdMEtD=w1000?authuser=0" alt=""></a>
+                </td>
             </tr>
         </table>
     </div>
     <div class="adrian personal">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb" alt="">
+        <img src="https://creyos.com/hubfs/theme-assets/blog/headphones.jpeg" alt="">
+        <img src="https://cdn.prod.website-files.com/5e86c7170f1ab21474c3f2a4/609bbba89bb59bed67a73d55_sergey-sokolov-yxJavcfExYs-unsplash.jpg" alt="">
         <h1>Adrian's Hobbies</h1>
-        <a href="https://www.facebook.com/adrian.reforsado.12/" target="_blank"><img src="https://lh3.googleusercontent.com/d/1WG-nyvXE_bzA03Zbeg_VGhbY5S7aqMKG=w1000?authuser=0" alt=""></a>
-        <a href="https://www.instagram.com/rjaks01/" target="_blank"><img src="https://lh3.googleusercontent.com/d/1g75v-rwqHBQE6vbWzNcoytOybEtQr6LF=w1000?authuser=0" alt=""></a>
-        <a href="https://github.com/rjaks" target="_blank"><img src="https://lh3.googleusercontent.com/d/1iqXxGWFpCWAEUGSIs7jaYMjDVu2luJGs=w1000?authuser=0" alt=""></a>
-        <table>
-            <tr>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
-            </tr>
-            <tr>
-                <th>Magmahal</th>
-                <th>Masaktan</th>
-                <th>Mag-yearn</th>
-            </tr>
-        </table>
+        <ul>
+            <li>Magmahal</li>
+            <li>Masaktan</li>
+            <li>Mag-yearn</li>
+        </ul>
     </div>
     <div class="lester personal">
-        <img src="" alt="">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb" alt="">
+        <img src="https://creyos.com/hubfs/theme-assets/blog/headphones.jpeg" alt="">
+        <img src="https://cdn.prod.website-files.com/5e86c7170f1ab21474c3f2a4/609bbba89bb59bed67a73d55_sergey-sokolov-yxJavcfExYs-unsplash.jpg" alt="">
         <h1>Lester's Hobbies</h1>
-        <a href="https://www.facebook.com/adrian.reforsado.12/" target="_blank"><img src="https://lh3.googleusercontent.com/d/1WG-nyvXE_bzA03Zbeg_VGhbY5S7aqMKG=w1000?authuser=0" alt=""></a>
-        <a href="https://www.instagram.com/rjaks01/" target="_blank"><img src="https://lh3.googleusercontent.com/d/1g75v-rwqHBQE6vbWzNcoytOybEtQr6LF=w1000?authuser=0" alt=""></a>
-        <a href="https://github.com/rjaks" target="_blank"><img src="https://lh3.googleusercontent.com/d/1iqXxGWFpCWAEUGSIs7jaYMjDVu2luJGs=w1000?authuser=0" alt=""></a>
-        <table>
-            <tr>
-                <td><img src="https://lh3.googleusercontent.com/d/1r4HaKHYcqxBxt5ctpk4YpxAZSqplWOjy=w1000?authuser=0'" alt=""></td>
-                <td><img src="https://lh3.googleusercontent.com/d/1r4HaKHYcqxBxt5ctpk4YpxAZSqplWOjy=w1000?authuser=0'" alt=""></td>
-                <td><img src="https://lh3.googleusercontent.com/d/1r4HaKHYcqxBxt5ctpk4YpxAZSqplWOjy=w1000?authuser=0'" alt=""></td>
-            </tr>
-            <tr>
-                <th>Magmahal</th>
-                <th>Masaktan</th>
-                <th>Mag-yearn</th>
-            </tr>
-        </table>
-        <a href="" target="_blank">LinkedIn Account</a>
+        <ul>
+            <li>Magmahal</li>
+            <li>Masaktan</li>
+            <li>Mag-yearn</li>
+        </ul>
     </div>
     <div class="carlo personal">
-        <img src="" alt="">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb" alt="">
+        <img src="https://creyos.com/hubfs/theme-assets/blog/headphones.jpeg" alt="">
+        <img src="https://cdn.prod.website-files.com/5e86c7170f1ab21474c3f2a4/609bbba89bb59bed67a73d55_sergey-sokolov-yxJavcfExYs-unsplash.jpg" alt="">
         <h1>Carlo's Hobbies</h1>
-        <table>
-            <tr>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
-            </tr>
-            <tr>
-                <th>Magmahal</th>
-                <th>Masaktan</th>
-                <th>Mag-yearn</th>
-            </tr>
-        </table>
-        <a href="" target="_blank">LinkedIn Account</a>
+        <ul>
+            <li>Magmahal</li>
+            <li>Masaktan</li>
+            <li>Mag-yearn</li>
+        </ul>
     </div>
     <div class="badz personal">
-        <img src="" alt="">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb" alt="">
+        <img src="https://creyos.com/hubfs/theme-assets/blog/headphones.jpeg" alt="">
+        <img src="https://cdn.prod.website-files.com/5e86c7170f1ab21474c3f2a4/609bbba89bb59bed67a73d55_sergey-sokolov-yxJavcfExYs-unsplash.jpg" alt="">
         <h1>Ophelia's Hobbies</h1>
-        <table>
-            <tr>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
-                <td><img src="" alt=""></td>
-            </tr>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </table>
-        <a href="" target="_blank">LinkedIn Account</a>
+        <ul>
+            <li>Magmahal</li>
+            <li>Masaktan</li>
+            <li>Mag-yearn</li>
+        </ul>
     </div>
 </body>
 </html>
