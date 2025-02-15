@@ -22,19 +22,25 @@
         }
 
         div {
-            min-height: 100vh;
+            min-height: 75vh;
         }
 
         .intro {
-            padding: 30vh;
-            font-size: 5rem;
-            letter-spacing: -3px;
+            padding: 30vh 30vh 0 30vh;
+            font-size: 4.5rem;
+            letter-spacing: -7px;
             line-height: 0.93;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://images.unsplash.com/photo-1597157153515-028fa3d4bd69?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-position: 0;
+            color: white;
+            text-shadow: 2px 2px 8px black;
         }
-
+        
         .intro p {
-            padding-top: 3vh;
-            font-size: 3rem;
+            letter-spacing: -2px;
+            padding-top: 25vh;
+            font-size: 2.25rem;
+            text-align: right;
         }
 
         table {
@@ -43,6 +49,7 @@
         }
 
         .group h1 {
+            padding-top: 5vh;
             font-size: 3rem;
         }
 
@@ -51,8 +58,10 @@
         }
 
         .groupimg img {
-            width: 100%;
-            border: 2px solid black;
+            width: 25vh;
+            height: 25vh;
+            object-fit: cover;
+            border: 3px solid black;
             border-radius: 100%;
         }
 
@@ -63,8 +72,11 @@
 
         .personal {
             font-size: 2rem;
+            margin-top: 25vh;
         }
-
+        .adrian {
+            margin-top: 0;
+        }
         .personal h1 {
             padding-top: 25vh;
         }
@@ -72,7 +84,8 @@
         .personal img {
             filter: brightness(75%) grayscale(1);
             width: 20%;
-            height: 100vh;
+            height: 90vh;
+            padding: 5vh 0 5vh 0;
             object-fit: cover;
             transition: 0.2s;
         }
@@ -109,14 +122,13 @@
 <body>
     <div class="intro">
         <h1>Group 1's Hobbies</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum elit eu elit ornare feugiat sit amet eu
-            mi. Phasellus lacinia est a ligula gravida, at feugiat mi elementum. Morbi.</p>
+        <p>Laboratory Exercise 2<br/>Trends in Application Development<br/>CSDC105</p>
     </div>
     <div class="group">
         <h1>The Researchers</h1>
         <table>
             <tr class="groupimg">
-                <td><img src="https://lh3.googleusercontent.com/d/19e9CxypbuOuaONcRyo3bPjPUuD-vTqls=w1000?authuser=0"
+                <td><img src="https://lh3.googleusercontent.com/d/1gv3PWbD_JI9zQ2IbHnEj4RPSQz0WSfIP=w1000?authuser=0"
                         alt=""></td>
                 <td><img src="https://lh3.googleusercontent.com/d/1uVReEgCkT9Uqjxd0_CYV2qZ6wohZgyuO"
                         alt=""></td>
@@ -132,12 +144,10 @@
                 <th>Ophelia Bianca R. Prilles</th>
             </tr>
             <tr>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum elit eu elit ornare feugiat sit
-                    amet eu mi. Phasellus lacinia est a ligula gravida, at feugiat mi elementum. Morbi.</td>
+                <td><i>In another life, I would have really liked just doing laundry and taxes with you.</i> <br><br> - Everything, Everywhere, All At Once (2022)</td>
                 <td>"A flower is not a flower until they bloom."</td>
                 <td>ano ilalagay dito gais</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum elit eu elit ornare feugiat sit
-                    amet eu mi. Phasellus lacinia est a ligula gravida, at feugiat mi elementum. Morbi.</td>
+                <td>Life seems but a quick succession of busy nothings</td>
             </tr>
             <tr>
                 <td><a href="https://www.facebook.com/adrian.reforsado.12/" target="_blank"><img
@@ -184,15 +194,15 @@
         </table>
     </div>
     <div class="adrian personal">
-        <img src="https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb" alt="">
-        <img src="https://creyos.com/hubfs/theme-assets/blog/headphones.jpeg" alt="">
-        <img src="https://cdn.prod.website-files.com/5e86c7170f1ab21474c3f2a4/609bbba89bb59bed67a73d55_sergey-sokolov-yxJavcfExYs-unsplash.jpg"
-            alt="">
+        <img src="https://res.cloudinary.com/adidas-app/image/upload/c_limit,h_2532,q_auto:good,w_2532/v1/page-assets/8/akub2mfjn0rpc2ado4xd.jpeg" alt="Running">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*UxP267TW-f6m3yBh" alt="Playing Games">
+        <img src="https://www.umn.ac.id/wp-content/uploads/2022/09/cinema-800x533.jpg"
+            alt="Cinema">
         <h1>Adrian's Hobbies</h1>
         <ul>
-            <li>Magmahal</li>
-            <li>Masaktan</li>
-            <li>Mag-yearn</li>
+            <li>Watching films 🎞️</li>
+            <li>Playing games 🎮</li>
+            <li>Running 🏃 <i style="font-size:1rem;">(eme lang) </i></li>
         </ul>
     </div>
     <div class="lester personal">
@@ -219,9 +229,9 @@
         </ul>
     </div>
     <div class="badz personal">
-        <img src="https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb" alt="">
-        <img src="https://creyos.com/hubfs/theme-assets/blog/headphones.jpeg" alt="">
-        <img src="https://cdn.prod.website-files.com/5e86c7170f1ab21474c3f2a4/609bbba89bb59bed67a73d55_sergey-sokolov-yxJavcfExYs-unsplash.jpg"
+        <img src="https://ylhsthewrangler.com/wp-content/uploads/2021/11/Listening-to-music.jpeg" alt="">
+        <img src="https://www.usnews.com/object/image/00000150-952f-d511-ad79-9faf32dd0000/151023-playingguitar-stock.jpg?update-time=1445611997665&size=responsive640" alt="">
+        <img src="https://images.unsplash.com/photo-1697029749544-ffa7f15f9dd0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhZGluZyUyMGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D"
             alt="">
         <h1>Ophelia's Hobbies</h1>
         <ul>
